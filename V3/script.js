@@ -8,7 +8,7 @@ const CFG = {
 
     // ---- YOUR STATUS ----
     // Options: 'available' | 'focused' | 'offline'
-    status: 'offline',
+    status: 'available',
 
     // ---- PROFILE INFO ----
     profile: {
@@ -58,7 +58,7 @@ const CFG = {
     // ---- VULNERABILITY TYPES ----
     vulnTypes: [
         "SSRF",
-        "Authentication Bypass", "IDOR", "Business Logic Errors",
+        "Authentication","Business Logic Errors",
         "Race Conditions","Information Disclosure","Brokn Access Control"
     ],
 
@@ -66,8 +66,7 @@ const CFG = {
     tools: [
         "Burp Suite", "OWASP ZAP", "Nmap",,
         "Gobuster", "FFUF", "Nuclei",
-        "Amass","Git", "Docker",
-        "Postman", "Proxychains",
+        "Amass","Git","Proxychains",
     ],
     // ---- PROGRAMMING LANGUAGES ----
     programing: [
@@ -81,6 +80,7 @@ const CFG = {
         { name: "GitHub", handle: "0xislamx0", url: "https://github.com/0xislamx0", icon: "GH" },
         { name: "LinkedIn", handle: "in/0xislamx0", url: "https://www.linkedin.com/in/0xislamx0/", icon: "LI" },
         { name: "Twitter/X", handle: "@0xislamx0", url: "https://x.com/0xislamx0", icon: "X" },
+        { name: "Telegram", handle: "xislamx0", url: "https://t.me/xislamx0", icon: "TM" },
         { name: "Email", handle: "0xislam.social@gmail.com", url: "mailto:0xislam.social@gmail.com", icon: "EM" }
     ],
 
@@ -106,8 +106,8 @@ const CFG = {
 
 const ST_MSG = {
     available: { text:"Available for new programs", desc:"Currently accepting new bug bounty invitations and collaborations." },
-    focused:   { text:"Focused on specific targets", desc:"Deep diving into selected programs. Urgent reports only please." },
-    offline:   { text:"Not accepting new work", desc:"Taking a break or fully booked. Check back later!" }
+    focused:   { text:"I'm currently focused on specific programs", desc:"but I'm also open to receiving new ones." },
+    offline:   { text:"Not accepting new work", desc:"Taking a break. Check back later!" }
 };
 
 // ================================================================
@@ -168,13 +168,13 @@ function mkTL(d, i) {
 
 const p = CFG.profile;
 const termLines = [
-    { t:'p', tx:'0xislamx0' },
+    { t:'p', tx:'whoami' },
     { t:'s' },
-    { t:'l', k:'IDENTITY', v:p.name },
-    { t:'l', k:'HANDLE', v:p.username, h:true },
-    { t:'l', k:'ROLE', v:p.role, h:true },
-    { t:'l', k:'LOCATION', v:p.location },
-    { t:'l', k:'EXPERIENCE', v:p.experience },
+    { t:'l', k:'IDENTITY:', v:p.name },
+    { t:'l', k:'HANDLE:', v:p.username, h:true },
+    { t:'l', k:'ROLE:', v:p.role, h:true },
+    { t:'l', k:'LOCATION:', v:p.location },
+    { t:'l', k:'EXPERIENCE:', v:p.experience },
     { t:'s' },
     { t:'l', k:'EMAIL', v:p.email },
     { t:'s' },
