@@ -8,7 +8,7 @@ const CFG = {
 
     // ---- YOUR STATUS ----
     // Options: 'available' | 'focused' | 'offline'
-    status: 'available',
+    status: 'offline',
 
     // ---- PROFILE INFO ----
     profile: {
