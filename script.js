@@ -86,7 +86,7 @@ const CFG = {
 
     // ---- SECRET MODAL MESSAGES ----
     secretMsgs: [
-        { type:'prompt', text:'$ whoami' },
+        { type:'prompt', text:'whoami' },
         { type:'out', text:'curious_hacker', hl:true },
         { type:'space' },
         { type:'prompt', text:'$ cat /dev/motivation' },
@@ -451,7 +451,7 @@ function openSec() {
             
             switch(m.type) {
                 case 'prompt':
-                    el.innerHTML = '<span class="tP">root@secret:~$</span> <span' + (m.hl ? ' style="color:var(--accent)"' : ' class="tC') + '>' + m.text + '</span>';
+                    el.innerHTML = '<span class="tP">root@secret:~$</span> <span' + (m.hl ? ' style="color:var(--accent)"' : ' class="tC"') + '>' + m.text + '</span>';
                     break;
                 case 'out':
                     if(m.white) {
