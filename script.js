@@ -21,8 +21,8 @@ const CFG = {
         bio: "Passionate about breaking things before bad actors do. Specialized in web application security, API testing, and logical vulnerabilities.",
         motto: "\"With great power comes great responsibility... and bigger bounties.\"",
         platforms: [
-            "YesWeHack", 
-            "Bugcrowd",
+            "YesWeHack",
+            // "Bugcrowd",
         ]
     },
 
@@ -47,18 +47,17 @@ const CFG = {
 
     // ---- BOUNTIES ----
     bounties: [
-        { program: "Stripe", severity: "critical", vulnType: "Authentication Bypass", reward: "$15,000", date: "Dec 2024" },
-        { program: "GitHub", severity: "high", vulnType: "Stored XSS", reward: "$7,500", date: "Nov 2024" },
-        { program: "Uber", severity: "high", vulnType: "IDOR Vulnerability", reward: "$5,000", date: "Oct 2024" },
-        { program: "Twitter/X", severity: "medium", vulnType: "Open Redirect", reward: "$2,500", date: "Sep 2024" },
-        { program: "PayPal", severity: "medium", vulnType: "CSRF Token Leak", reward: "$2,000", date: "Aug 2024" },
-        { program: "Slack", severity: "low", vulnType: "Information Disclosure", reward: "$500", date: "Jul 2024" }
+        { program: "NotYet", severity: "critical", vulnType: "NotYet", reward: "NotYet", date: "NotYet" },
+        { program: "NotYet", severity: "high", vulnType: "NotYet", reward: "NotYet", date: "NotYet" },
+        { program: "NotYet", severity: "high", vulnType: "NotYet", reward: "NotYet", date: "NotYet" },
+        { program: "NotYet", severity: "medium", vulnType: "NotYet", reward: "NotYet", date: "NotYet" },
+        { program: "NotYet", severity: "medium", vulnType: "NotYet", reward: "NotYet", date: "NotYet" },
+        { program: "NotYet", severity: "low", vulnType: "NotYet", reward: "NotYet", date: "NotYet" }
     ],
 
     // ---- VULNERABILITY TYPES ----
     vulnTypes: [
-        "SSRF",
-        "Authentication","Business Logic Errors",
+        "SSRF","Authentication","Business Logic Errors",
         "Race Conditions","Information Disclosure","Brokn Access Control"
     ],
 
@@ -70,17 +69,17 @@ const CFG = {
     ],
     // ---- PROGRAMMING LANGUAGES ----
     programing: [
-        "Python", "JavaScript", "Bash", "Go", "C","PHP",
+        "Python", "JavaScript", "Bash", "Go", "PHP",
     ],
 
     // ---- PLATFORMS / SOCIAL (WITH REAL URLS) ----
     platforms: [
         { name: "HackerOne", handle: "@0xislamx0", url: "https://hackerone.com/0xislamx0?type=user", icon: "H1" },
-        { name: "Bugcrowd", handle: "@0xislamx0", url: "https://bugcrowd.com/h/0xislamx0", icon: "BC" },
+        //{ name: "Bugcrowd", handle: "@0xislamx0", url: "https://bugcrowd.com/h/0xislamx0", icon: "BC" },
         { name: "GitHub", handle: "0xislamx0", url: "https://github.com/0xislamx0", icon: "GH" },
         { name: "LinkedIn", handle: "in/0xislamx0", url: "https://www.linkedin.com/in/0xislamx0/", icon: "LI" },
         { name: "Twitter/X", handle: "@0xislamx0", url: "https://x.com/0xislamx0", icon: "X" },
-        { name: "Telegram", handle: "xislamx0", url: "https://t.me/xislamx0", icon: "TM" },
+        { name: "Telegram", handle: "xislamx0", url: "https://t.me/xislamx0", icon: "TG" },
         { name: "Email", handle: "0xislam.social@gmail.com", url: "mailto:0xislam.social@gmail.com", icon: "EM" }
     ],
 
