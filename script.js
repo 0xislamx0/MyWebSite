@@ -40,7 +40,6 @@ const CFG = {
     // ============================================================
     stats: [
         { value: 0, label: "Total Bugs Found" },
-        { value: 0,  label: "Critical Severity" },
         { value: 0, prefix: "$", label: "Total Earnings" },
         { value: 0,  label: "Programs Hacked" }
     ],
@@ -482,8 +481,105 @@ function closeSec() {
     document.body.classList.remove('no-scroll');
 }
 
+// CV MODAL
+var cvModal = document.getElementById('cvModal');
+var cvOut = document.getElementById('cvOut');
+
+const cvLines = [
+    { type:'prompt', text:'cat CV' },
+    { type:'space' },
+    { type:'out', text:'Islam Abdelhamid Omar', white:true },
+    { type:'out', text:'Penetration Tester & Bug Hunter', hl:true },
+    { type:'out', text:'0xislam.social@gmail.com | +201121855868' },
+    { type:'space' },
+    { type:'out', text:'SUMMARY', accent:true },
+    { type:'out', text:'Aspiring Security Researcher and Bug Bounty Hunter with a growing focus on web application' },
+    { type:'out', text:'security. Interested in identifying complex vulnerabilities beyond automated scanning,' },
+    { type:'out', text:'particularly Business Logic flaws, Server-Side issues, and Broken Access Control.' },
+    { type:'out', text:'Developing a deeper understanding of backend application behavior and how vulnerabilities' },
+    { type:'out', text:'emerge from flawed logic and design. Currently studying advanced web exploitation concepts,' },
+    { type:'out', text:'while strengthening practical skills through hands-on labs and experimentation.' },
+    { type:'out', text:'Driven to build a strong offensive security mindset and continuously improve through real-' },
+    { type:'out', text:'world practice.' },
+    { type:'space' },
+    { type:'out', text:'EDUCATION', accent:true },
+    { type:'out', text:"Bachelor's Degree in Business Information Systems (BIS)" },
+    { type:'out', text:'Misr Higher Institute for Commerce & Computers - Graduated: July 2026' },
+    { type:'space' },
+    { type:'out', text:'PROJECTS', accent:true },
+    { type:'out', text:'Nabd - Blood Bank & Donation Management System', hl:true },
+    { type:'out', text:'A comprehensive, multi-branch system designed to automate the blood donation lifecycle and predict demand using AI.' },
+    { type:'out', text:'• System Architecture: Architected core logic, PostgreSQL schemas, and data flow using Django.' },
+    { type:'out', text:'• Security & Access: Designed and implemented strict RBAC to isolate privileges.' },
+    { type:'out', text:'• Vulnerability Analysis: Built from the ground up to gain deep backend architecture understanding.' },
+    { type:'space' },
+    { type:'out', text:'SKILLS', accent:true },
+    { type:'out', text:'• Security: OWASP Top 10, Business Logic, RBAC, API Security' },
+    { type:'out', text:'• Tools: Burp Suite, FFUF, Nuclei, Wireshark, Nmap, Git' },
+    { type:'out', text:'• Programming: Python, JS, PHP, Bash, SQL' },
+    { type:'out', text:'• Operating Systems: Linux, Windows' },
+    { type:'space' },
+    { type:'out', text:'LANGUAGES', accent:true },
+    { type:'out', text:'Arabic (Native) | English (Intermediate)' },
+    { type:'space' },
+    { type:'end' }
+];
+
+let cvTi = 0;
+let cvTo = null;
+
+function openCV() {
+    cvOut.innerHTML = '';
+    cvModal.classList.add('act');
+    document.body.classList.add('no-scroll');
+    
+    cvTi = 0;
+    if(cvTo) clearTimeout(cvTo);
+    
+    function playCV() {
+        if(cvTi >= cvLines.length || !cvModal.classList.contains('act')) return;
+        var m = cvLines[cvTi];
+        var el = document.createElement('div');
+        el.className = 'mL';
+        
+        switch(m.type) {
+            case 'prompt':
+                el.innerHTML = '<span class="tP">visitor@security:~$</span> <span class="tC">' + m.text + '</span>';
+                break;
+            case 'out':
+                if(m.white) el.innerHTML = '<span class="tWhite" style="font-weight:bold; font-size:16px;">' + m.text + '</span>';
+                else if(m.accent) el.innerHTML = '<span style="color:var(--accent); font-weight:bold;">' + m.text + '</span>';
+                else if(m.hl) el.innerHTML = '<span style="color:var(--accent)">' + m.text + '</span>';
+                else el.innerHTML = '<span style="color:var(--text-secondary)">' + m.text + '</span>';
+                break;
+            case 'space':
+                el.innerHTML = '&nbsp;';
+                break;
+            case 'end':
+                el.innerHTML = '<span class="tP">visitor@security:~$</span><span class="cursor"></span>';
+                break;
+        }
+        
+        cvOut.appendChild(el);
+        setTimeout(function() { el.classList.add('show'); }, 10);
+        
+        cvTi++;
+        if(cvTi < cvLines.length) {
+            cvTo = setTimeout(playCV, cvTi === 1 ? 300 : 200);
+        }
+    }
+    
+    setTimeout(playCV, 250);
+}
+
+function closeCV() {
+    cvModal.classList.remove('act');
+    document.body.classList.remove('no-scroll');
+}
+
 document.addEventListener('keydown', function(e) {
-    if(e.key === 'Escape' && modal.classList.contains('act')) {
-        closeSec();
+    if(e.key === 'Escape') {
+        if(modal.classList.contains('act')) closeSec();
+        if(cvModal.classList.contains('act')) closeCV();
     }
 });

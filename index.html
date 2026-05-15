@@ -148,13 +148,33 @@
         <div class="grid md:grid-cols-2 gap-6" id="platsGrid"></div>
 
         <div style="margin-top:5rem" class="text-center">
-            <p class="text-sm mb-4 font-mono" style="color:var(--text-muted)">/* you shouldn't click this */</p>
-            <button class="secretBtn btnPulse" onclick="openSec()" aria-label="Secret button">
-                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-                </svg>
-                <span>Don't Click Me!</span>
-            </button>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                <!-- CV Button -->
+                <div class="flex flex-col items-center">
+                    <p class="text-sm mb-4 font-mono" style="color:var(--text-muted)">/* just click it! */</p>
+                    <button class="secretBtn" onclick="openCV('')" aria-label="View CV">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        <span>Click for CV</span>
+                    </button>
+                </div>
+                
+                <!-- Secret Button -->
+                <div class="flex flex-col items-center">
+                    <p class="text-sm mb-4 font-mono" style="color:var(--text-muted)">/* you shouldn't click this */</p>
+                    <button class="secretBtn btnPulse" onclick="openSec()" aria-label="Secret button">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+                        </svg>
+                        <span>Don't Click Me!</span>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -163,7 +183,7 @@
 <footer class="py-10 px-6 border-t relative z-10" style="border-color:var(--border-color)">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <p class="font-mono text-sm" style="color:var(--text-secondary)">
-            <span style="color:var(--accent)">$</span> echo "Built with precision"
+            <span style="color:var(--accent)">$</span> echo "I'm glad you're here :)"
         </p>
         <p class="font-mono text-xs" style="color:var(--text-muted)"> All systems can be HACKED</p>
     </div>
@@ -181,6 +201,22 @@
                 <span class="term-title">root@secret — privileged</span>
             </div>
             <div class="modalBody" id="modOut"></div>
+        </div>
+    </div>
+</div>
+
+<!-- CV Modal -->
+<div class="modalOv" id="cvModal" role="dialog" aria-modal="true">
+    <div class="modalBg" onclick="closeCV()"></div>
+    <div class="modalBox" style="max-width: 800px; max-height: 90vh; overflow-y: auto;">
+        <div class="modalTerm">
+            <div class="term-head">
+                <span class="term-dot dot-r" onclick="closeCV()" style="cursor: pointer;"></span>
+                <span class="term-dot dot-y"></span>
+                <span class="term-dot dot-g"></span>
+                <span class="term-title">visitor@security — cat CV</span>
+            </div>
+            <div class="modalBody" id="cvOut"></div>
         </div>
     </div>
 </div>
