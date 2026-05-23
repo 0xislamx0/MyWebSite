@@ -105,7 +105,7 @@ const CFG = {
 const ST_MSG = {
     available: { text:"Available for new programs", desc:"Currently accepting new bug bounty invitations and collaborations." },
     focused:   { text:"I'm currently focused on specific programs", desc:"but I'm also open to receiving new ones." },
-    offline:   { text:"Not accepting new work", desc:"Taking a break. Check back later!" }
+    offline:   { text:"Taking a break.", desc:" Check back later!" }
 };
 
 // ================================================================
