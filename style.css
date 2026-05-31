@@ -1,8 +1,8 @@
         :root {
             --bg-primary: #0a0a0f;
-            --bg-secondary: #0d1117;
-            --bg-card: #161b22;
-            --bg-elevated: #1c2128;
+            --bg-secondary: #0a0a0f;
+            --bg-card: #0a0a0f;
+            --bg-elevated: #0a0a0f;
             --border-color: #21262d;
             --text-primary: #e6edf3;
             --text-secondary: #8b949e;
@@ -42,7 +42,7 @@
         }
 
         .term-box {
-            background: linear-gradient(145deg, var(--bg-secondary), var(--bg-primary));
+            background: var(--bg-primary);
             border: 1px solid var(--border-color);
             border-radius: 14px;
             overflow: hidden;
@@ -196,7 +196,7 @@
 
         /* Stat Cards */
         .statCard {
-            background: linear-gradient(145deg, var(--bg-card), var(--bg-secondary));
+            background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 14px;
             padding: 26px;
@@ -416,7 +416,7 @@
         }
         .modalOv.act .modalBox { transform: scale(1) translateY(0); }
         .modalTerm {
-            background: linear-gradient(145deg, var(--bg-secondary), var(--bg-primary));
+            background: var(--bg-primary);
             border: 1px solid var(--accent);
             border-radius: 18px;
             overflow: hidden;
