@@ -40,7 +40,6 @@ const CFG = {
     // ============================================================
     stats: [
         { value: 0, label: "Total Bugs Found" },
-        { value: 0, prefix: "$", label: "Total Earnings" },
         { value: 0,  label: "Programs Hacked" }
     ],
 
@@ -56,16 +55,17 @@ const CFG = {
 
     // ---- VULNERABILITY TYPES ----
     vulnTypes: [
-        "SSRF","Authentication","Business Logic Errors",
-        "Race Conditions","Information Disclosure","Brokn Access Control"
+        "Authentication","Business Logic Errors",
+        "Information Disclosure","Broken Access Control",
     ],
 
     // ---- TOOLS ----
     tools: [
-        "Burp Suite", "OWASP ZAP", "Nmap",,
-        "Gobuster", "FFUF", "Nuclei",
-        "Amass","Git","Proxychains",
+        "Burp Suite", "Nmap",
+        "FFUF", "Nuclei",
+        "Amass",
     ],
+
     // ---- PROGRAMMING LANGUAGES ----
     programing: [
         "Python", "JavaScript", "Bash", "Go", "PHP",
@@ -74,12 +74,12 @@ const CFG = {
     // ---- PLATFORMS / SOCIAL (WITH REAL URLS) ----
     platforms: [
         { name: "HackerOne", handle: "@0xislamx0", url: "https://hackerone.com/0xislamx0?type=user", icon: "H1" },
-        //{ name: "Bugcrowd", handle: "@0xislamx0", url: "https://bugcrowd.com/h/0xislamx0", icon: "BC" },
+    //{ name: "Bugcrowd", handle: "@0xislamx0", url: "https://bugcrowd.com/h/0xislamx0", icon: "BC" },
         { name: "GitHub", handle: "0xislamx0", url: "https://github.com/0xislamx0", icon: "GH" },
         { name: "LinkedIn", handle: "in/0xislamx0", url: "https://www.linkedin.com/in/0xislamx0/", icon: "LI" },
         { name: "Twitter/X", handle: "@0xislamx0", url: "https://x.com/0xislamx0", icon: "X" },
-        { name: "Telegram", handle: "xislamx0", url: "https://t.me/xislamx0", icon: "TG" },
-        { name: "Email", handle: "0xislam.social@gmail.com", url: "mailto:0xislam.social@gmail.com", icon: "EM" }
+    //   { name: "Telegram", handle: "xislamx0", url: "https://t.me/xislamx0", icon: "TG" },
+    //   { name: "Email", handle: "0xislam.social@gmail.com", url: "mailto:0xislam.social@gmail.com", icon: "EM" }
     ],
 
     // ---- SECRET MODAL MESSAGES ----
@@ -507,7 +507,7 @@ const cvLines = [
     { type:'out', text:'Misr Higher Institute for Commerce & Computers - Graduated: July 2026' },
     { type:'space' },
     { type:'out', text:'PROJECTS', accent:true },
-    { type:'out', text:'Nabd - Blood Bank & Donation Management System', hl:true },
+    { type:'out', text:'Nabd - AI-Powered Blood Bank Management System', hl:true },
     { type:'out', text:'A comprehensive, multi-branch system designed to automate the blood donation lifecycle and predict demand using AI.' },
     { type:'out', text:'• System Architecture: Architected core logic, PostgreSQL schemas, and data flow using Django.' },
     { type:'out', text:'• Security & Access: Designed and implemented strict RBAC to isolate privileges.' },
@@ -515,7 +515,7 @@ const cvLines = [
     { type:'space' },
     { type:'out', text:'SKILLS', accent:true },
     { type:'out', text:'• Security: OWASP Top 10, Business Logic, RBAC, API Security' },
-    { type:'out', text:'• Tools: Burp Suite, FFUF, Nuclei, Wireshark, Nmap, Git' },
+    { type:'out', text:'• Tools: Burp Suite, FFUF, Nuclei, Nmap, Amass' },
     { type:'out', text:'• Programming: Python, JS, PHP, Bash, SQL' },
     { type:'out', text:'• Operating Systems: Linux, Windows' },
     { type:'space' },
